@@ -12,7 +12,7 @@ function resolve(filename) {
 
 export function mapToRelative(currentFile, module) {
     let from = path.dirname(currentFile);
-    let to = path.normalize(module);
+    let to = path.resolve(process.cwd(), module);
 
     from = resolve(from);
     to = resolve(to);
